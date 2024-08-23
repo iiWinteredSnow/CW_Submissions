@@ -22,7 +22,7 @@ public class HelloWorld {
 		System.out.println("     O    O   O    O O     O    O   O    O   O   OO  O");
 		System.out.println("     O   OOOOO     O      O    OOOOO   OOOOO   O O O");
 		System.out.println("O    O  O     O    O      O    O   O  O     O  O  OO");
-		System.out.println(" OOO   O     O    O      O    O   O  O     O  O   O");
+		System.out.print(" OOO   O     O    O      O    O   O  O     O  O   O");
 		
 	}
 
