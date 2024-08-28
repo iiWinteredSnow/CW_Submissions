@@ -19,8 +19,9 @@
     int y = 1;
     int z = 2;
     x--; // x followed by the double minus sign
-    y++;
+    y++; 
     z+=y;
+// x = -1, y = 2, z = 3
 //After the above code runs, what are x, y, and z equal to?
 
     int a = 3;
@@ -29,6 +30,7 @@
     a = c * 2;
     b = b / 2;
     c++;
+// a = 4, b = 2, c = 3
 //After the above code runs, what are a, b, and c equal to?
 
 //PART THREE: CASTING
