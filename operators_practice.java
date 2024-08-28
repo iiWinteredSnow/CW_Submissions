@@ -21,7 +21,7 @@
     x--; // x followed by the double minus sign
     y++; 
     z+=y;
-// x = -1, y = 2, z = 3
+// x = -1, y = 2, z = 4
 //After the above code runs, what are x, y, and z equal to?
 
     int a = 3;
