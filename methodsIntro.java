@@ -1,3 +1,5 @@
+package HelloWorld;
+
 
 public class methodsIntro {
 
@@ -15,6 +17,7 @@ public class methodsIntro {
 		stateHairStyle();
 		stateFavoriteFood();
 		printCircleStats(2);
+		printMathStuffs(4, 2);
 		
 	}
 	public static void stateName() {
@@ -46,8 +49,22 @@ public class methodsIntro {
 		System.out.println("area of this circle is "+carea+".");
 	}
 	
-	public static void printMathStuffs() {
+	public static void printMathStuffs(int num1, int num2) {
+		int diff = num1-num2;
+		int sum = num1+num2;
+		int prod = num1*num2;
+		int quo = num1/num2;
+		int mod = num1%num2;
 		
+		
+		
+		
+		System.out.println();
+		System.out.println(diff);
+		System.out.println(sum);
+		System.out.println(prod);
+		System.out.println(quo);
+		System.out.println(mod);
 	}
 	
 }
