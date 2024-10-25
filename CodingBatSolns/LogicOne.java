@@ -22,18 +22,18 @@ public int dateFashion(int you, int date)
 
 public boolean squirrelPlay(int temp, boolean isSummer) 
 {
-   int upperLimit = isSummer?100:90;
-   return temp>=60&&temp<=upperLimit;
+   int limit = isSummer?100:90;
+   return temp>=60&&temp<=limit;
 }
 
 public int caughtSpeeding(int speed, boolean isBirthday) 
 {
-  int adjustedSpeed=isBirthday?speed-5:speed;
-  if (adjustedSpeed<=60) 
+  int adjSpeed=isBirthday?speed-5:speed;
+  if (adjSpeed<=60) 
 {
   return 0;  
 } 
-  else if (adjustedSpeed<=80) 
+  else if (adjSpeed<=80) 
 {
   return 1;  
 } 
