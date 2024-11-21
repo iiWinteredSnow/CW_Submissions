@@ -11,6 +11,7 @@ public class LoopsIntro {
 			 x+=i;
 			 System.out.println(x+" "+i);
 		 }
+		printIfRepeats("abcd");
 	
 
 		/* Create a class with a main method. Inside the class, create the following methods:
