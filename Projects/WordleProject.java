@@ -6,8 +6,7 @@ public class WordleGame {
 /*
 
 
-NOTE: THIS IS A VERY DRAFTED CODE THAT DOESNT WORK
-JAYTHAN DONT TURN THIS IN YET
+nah i think its done now
 
 */
     public static void main(String[] args) {
