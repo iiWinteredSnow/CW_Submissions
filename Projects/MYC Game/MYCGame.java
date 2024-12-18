@@ -3,11 +3,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MYCGame {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        MainCharacter jay = new MainCharacter(100, 135);
+        
         System.out.println("Welcome to the MYC RPG Game!");
         System.out.println("You can move left or right and sometimes attack enemies.");
         System.out.println("There will possibly be enemies, and your sword deals random damage.(don't you love gambling?)");
@@ -106,9 +105,10 @@ public class MYCGame {
         String command = scanner.next();
     	if (command.equals("yes")) {
         	System.out.println("(its your ex's boyfriend. will be a boss with a lot of health and a lot of damage)(parentheses for later edit)");
-        	Enemy exb = new Enemy(100, 140);
+        	Enemy exb = new Enemy(1000, 140);
         	double eHP = exb.getHealth();
         	double eSP = exb.getSpeed();
+        	
         	while (eHP>=0) {
                 String battleact = scanner.next();
             	int damage = random.nextInt(20) + 1;
