@@ -21,16 +21,12 @@ public class MYCGame {
         if (command.equals("tundra")){
         	System.out.println("you have selected tundra.");
         	System.out.println(location);
-        }
-        if (command.equals("desert")){
-        	System.out.println("you have selected desert.");
+        	tundra();
         }
         if (command.equals("park")){
         	System.out.println("you have selected park.");
+        	System.out.println(location);
         	park();
-        }
-        if (command.equals("beach")){
-        	System.out.println("you have selected beach.");
         }
         break; // couldn't find anything or do anything(that i could) to not use this
         
@@ -90,21 +86,73 @@ public class MYCGame {
         }*/
     }
     public static void tundra(){
+    	Scanner scanner = new Scanner(System.in);
+        System.out.println("You decide it would be a good idea to wander around a tundra in a gangster attire. You encounter some "
+        		+ "\n polar bears staring at you. There's even a cute cub, but you have to be careful of your next move."
+        		+ "");
+        wait(1);
+    	System.out.println("You get this gut feeling about doing something AWESOME. What are you going to do?(jump, sneak)");
     	
+    	Random random = new Random();
+        String command = scanner.next();
+        
+        if (command.equals("jump")) {
+        	MainCharacter me = new MainCharacter(93, 135);
+           	System.out.println("WOAH! SICK JUMP over 5 POLAR BEARS! however 4 of them noticed you.");
+        	wait(1);
+        	System.out.println("a unusual brawl is about to occur!");
+        	Enemy polar1 = new Enemy(150, 140);
+        	Enemy polar2 = new Enemy(250, 120);
+        	Enemy polar3 = new Enemy(250, 120);
+        	Enemy polar4 = new Enemy(250, 120);
+        	double eHP1 = polar1.getHealth();
+        	double eHP2 = polar2.getHealth();
+        	double eHP3 = polar3.getHealth();
+        	double eHP4 = polar4.getHealth();
+        	/*double eSP = exb.getSpeed();
+        	double HP = chillguy.getHealth();
+        	double SP = chillguy.getSpeed();
+        	double u = 1;
+        	while () {
+        		System.out.println("What is your action?(attack, meditate, quit)");
+                String battleact = scanner.next();
+            	int damage = random.nextInt(20) + 1; //your damage
+                if (battleact.equals("attack")){
+                	System.out.println("you have selected attack.");
+                	eHP -= damage;
+                	System.out.println("dealt " + damage + " damage! enemy HP: "+ eHP);
+                	System.out.println();
+                	
+                	System.out.println(u);
+                	u++;
+                	
+             
+                }*/
+
+        }
+        
+        
+        if (command.equals("sneak")) {}
     }
-    public static void desert(){
-    	
-    }
+    
+    
+    
+    
+    
+    
+    
     public static void park(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("You are walking in a park. You stop to admire the beautiful snowfall. It reminds you of"
     			+ " something but you can't put a finger on it. You only have the ability to walk forward so you walk forward.");
-    	System.out.println("(you notice someone who brings you great pain, do you approach?)(yes, no)");
+        wait(1);
+    	System.out.println("you notice someone who brings you great pain, do you approach?(yes, no)");
     	
     	Random random = new Random();
         String command = scanner.next();
     	if (command.equals("yes")) {
         	System.out.println("(its your ex's boyfriend. will be a boss with a lot of health and a lot of damage)(parentheses for later edit)");
+        	wait(1);
         	System.out.println("He hits you and ensues a fight.");
         	Enemy exb = new Enemy(1000, 140);
         	MainCharacter chillguy = new MainCharacter(93, 135);
@@ -132,7 +180,7 @@ public class MYCGame {
                     	System.out.println("dealt " + damage + " damage! enemy HP: "+ eHP);
                     	System.out.println();
                     	
-                    	System.out.println(u);
+                    	System.out.println("Turn "+u);
                     	u++;
                     	
                  
@@ -150,15 +198,13 @@ public class MYCGame {
             	}
             	if (eHP<1) {
             		System.out.println("As you throw the last punch, his beaten body falls, face first and seemingly blood spills from his pockets.");
+            		wait(1);
             		System.out.println("you run away but happily as you satiated your pain.");
+            		wait(1);
+            		System.out.println("you have defeated ex's boyfriend!");
             		System.out.println();
-            		try {
-            		    Thread.sleep(1000); // Delay for a specified number of milliseconds
-            		} catch (InterruptedException e) {
-            		    // Handle the exception if the thread is interrupted
-            		    System.err.println("Interrupted: " + e.getMessage());
-            		}
-            		System.out.println("pdosfjesif");
+            		wait(1);
+            		System.out.println("The end.");
 
                 }
         	}
@@ -189,7 +235,7 @@ public class MYCGame {
                     	System.out.println("your HP: "+ HP);
                     	System.out.println();
                     	
-                    	System.out.println(u);
+                    	System.out.println("Turn "+u);
                     	u++;
                     	
                  
@@ -203,32 +249,38 @@ public class MYCGame {
             		System.out.println("Ex's Boyfriend dealt " + enemydamage + " damage! your HP: "+ HP);
             		System.out.println("you died and your body was beaten to a bloody pulp.");
             		
+            		
             	}
             	if (eHP<1) {
             		System.out.println("As you throw the last punch, his beaten body falls, face first and seemingly blood spills from his pockets.");
+            		wait(1);
             		System.out.println("you run away but happily as you satiated your pain.");
+            		wait(1);
+            		System.out.println("you have defeated ex's boyfriend!");
             		System.out.println();
-            		try {
-            		    Thread.sleep(1000); // Delay for a specified number of milliseconds
-            		} catch (InterruptedException e) {
-            		    // Handle the exception if the thread is interrupted
-            		    System.err.println("Interrupted: " + e.getMessage());
-            		}
-            		System.out.println("pdosfjesif");
+            		wait(1);
+            		System.out.println("The end.");
 
                 }
         	}
-        	System.out.println("you have defeated ex's boyfriend!");
+        	
     	}
         	
        
     	if (command.equals("no")) {
     	System.out.println("you continue to exist and ignore the pain.");
+    	System.out.println("The end.");
     	}
     
     }
-    public static void beach(){
-    	
+    public static void wait(int sec){
+    	int seconds = 1000*sec;
+		try {
+		    Thread.sleep(seconds); // Delay for a specified number of milliseconds
+		} catch (InterruptedException e) {
+		    // Handle the exception if the thread is interrupted
+		    System.err.println("Interrupted: " + e.getMessage());
+		}
     }
     
     
