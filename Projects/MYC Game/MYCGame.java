@@ -1,7 +1,7 @@
 package mycGame;
 import java.util.Random;
 import java.util.Scanner;
-
+import java.util.concurrent.TimeUnit;
 public class MYCGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -105,18 +105,117 @@ public class MYCGame {
         String command = scanner.next();
     	if (command.equals("yes")) {
         	System.out.println("(its your ex's boyfriend. will be a boss with a lot of health and a lot of damage)(parentheses for later edit)");
+        	System.out.println("He hits you and ensues a fight.");
         	Enemy exb = new Enemy(1000, 140);
+        	MainCharacter chillguy = new MainCharacter(93, 135);
         	double eHP = exb.getHealth();
         	double eSP = exb.getSpeed();
+        	double HP = chillguy.getHealth();
+        	double SP = chillguy.getSpeed();
+        	double u = 1;
         	
-        	while (eHP>=0) {
-                String battleact = scanner.next();
-            	int damage = random.nextInt(20) + 1;
-                if (battleact.equals("attack")){
-                	System.out.println("you have selected attack.");
-                	eHP -= damage;
-                	System.out.println("dealt " + damage + " damage! enemy HP: "+ eHP);
-             
+        	
+        	
+        	
+        	
+        	
+        	
+        	if (SP>eSP) { // if your speed is faster than enemy
+            	int enemydamage = 1;
+            	while ((eHP>=1)&&(HP>=1)) {
+            		System.out.println("What is your action?(attack, meditate, quit)");
+                    String battleact = scanner.next();
+                	int damage = random.nextInt(20) + 1; //your damage
+                    if (battleact.equals("attack")){
+                    	System.out.println("you have selected attack.");
+                    	eHP -= damage;
+                    	System.out.println("dealt " + damage + " damage! enemy HP: "+ eHP);
+                    	System.out.println();
+                    	
+                    	System.out.println(u);
+                    	u++;
+                    	
+                 
+                    }
+                    HP -= enemydamage;
+                    System.out.println("Ex's Boyfriend dealt " + enemydamage + " damage! your HP: "+ HP);
+                    
+                    
+            	}
+            	if (HP<1) {
+            		
+            		System.out.println("Ex's Boyfriend dealt " + enemydamage + " damage! your HP: "+ HP);
+            		System.out.println("you died and your body was beaten to a bloody pulp.");
+            		
+            	}
+            	if (eHP<1) {
+            		System.out.println("As you throw the last punch, his beaten body falls, face first and seemingly blood spills from his pockets.");
+            		System.out.println("you run away but happily as you satiated your pain.");
+            		System.out.println();
+            		try {
+            		    Thread.sleep(1000); // Delay for a specified number of milliseconds
+            		} catch (InterruptedException e) {
+            		    // Handle the exception if the thread is interrupted
+            		    System.err.println("Interrupted: " + e.getMessage());
+            		}
+            		System.out.println("pdosfjesif");
+
+                }
+        	}
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	
+        	if (SP<eSP) { // if your speed is slower than enemy
+        		int enemydamage = 1;
+            	while ((eHP>=1)&&(HP>=1)) {
+            		int damage = random.nextInt(20) + 1; //your damage
+                    HP -= enemydamage;
+                    System.out.println("Ex's Boyfriend dealt " + enemydamage + " damage! your HP: "+ HP);
+            		System.out.println("What is your action?(attack, meditate, quit)");
+                    String battleact = scanner.next();
+                    
+                    
+                    if (battleact.equals("attack")){
+                    	System.out.println("you have selected attack.");
+                    	System.out.println();
+                    	eHP -= damage;
+                    	System.out.println("dealt " + damage + " damage! enemy HP: "+ eHP);
+                    	System.out.println("your HP: "+ HP);
+                    	System.out.println();
+                    	
+                    	System.out.println(u);
+                    	u++;
+                    	
+                 
+                    }
+
+                    
+                    
+            	}
+            	if (HP<1) {
+            		
+            		System.out.println("Ex's Boyfriend dealt " + enemydamage + " damage! your HP: "+ HP);
+            		System.out.println("you died and your body was beaten to a bloody pulp.");
+            		
+            	}
+            	if (eHP<1) {
+            		System.out.println("As you throw the last punch, his beaten body falls, face first and seemingly blood spills from his pockets.");
+            		System.out.println("you run away but happily as you satiated your pain.");
+            		System.out.println();
+            		try {
+            		    Thread.sleep(1000); // Delay for a specified number of milliseconds
+            		} catch (InterruptedException e) {
+            		    // Handle the exception if the thread is interrupted
+            		    System.err.println("Interrupted: " + e.getMessage());
+            		}
+            		System.out.println("pdosfjesif");
+
                 }
         	}
         	System.out.println("you have defeated ex's boyfriend!");
@@ -124,7 +223,7 @@ public class MYCGame {
         	
        
     	if (command.equals("no")) {
-    	System.out.println("(you continue to exist and ignore the pain.)");
+    	System.out.println("you continue to exist and ignore the pain.");
     	}
     
     }
