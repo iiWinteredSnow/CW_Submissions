@@ -147,6 +147,9 @@ public class MYCGame {
             				System.out.println("polar bears dealt " + enemydamage + " damage! your HP: "+ HP);
             				wait(1);
             				System.out.println();
+            				if ((HP<1)) {
+            	        		break;
+            	        	}
             			} 
             			else {
             				System.out.println("This enemy is already dead!");
@@ -188,6 +191,9 @@ public class MYCGame {
             				System.out.println("polar bears dealt " + enemydamage + " damage! your HP: "+ HP);
             				wait(1);
             				System.out.println();
+            				if ((HP<1)) {
+            	        		break;
+            	        	}
 
             			} 
             			else {
@@ -206,6 +212,9 @@ public class MYCGame {
             				System.out.println("polar bears dealt " + enemydamage + " damage! your HP: "+ HP);
             				wait(1);
             				System.out.println();
+            				if ((HP<1)) {
+            	        		break;
+            	        	}
 
             			} 
             			else {
@@ -224,7 +233,9 @@ public class MYCGame {
             				System.out.println("polar bears dealt " + enemydamage + " damage! your HP: "+ HP);
             				wait(1);
             				System.out.println();
-                         
+            				if ((HP<1)) {
+            	        		break;
+            	        	}
 
             			} 
             			else {
@@ -237,6 +248,7 @@ public class MYCGame {
         				 wait(1);
                          System.out.println("polar bears dealt " + enemydamage + " damage! your HP: "+ HP);
                          System.out.println();
+                         
         			}	
         		}	
         	
@@ -274,7 +286,7 @@ public class MYCGame {
                 	
              
                 }*/
-        	int randomNumber = 15 + random.nextInt(26);
+        
         }
         
         
