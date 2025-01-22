@@ -15,3 +15,15 @@ public int[] reverse3(int[] nums) {
 		nums[1] = temp2;
 		return nums;
 }
+
+public int[] maxEnd3(int[] nums) {
+  if(nums[0]>nums[2])
+  {
+    nums[1] = nums[0];
+    nums[2] = nums[0];
+  }
+  nums[0] = nums[2];
+  nums[1] = nums[2];
+  return nums;
+}
+
