@@ -27,3 +27,18 @@ public int[] makeLast(int[] nums) {
   numArr[numArr.length-1] = temp1;
   return numArr;
 }
+
+public boolean double23(int[] nums) {
+  if (nums.length<2){
+    return false;
+  }
+  if (nums[0]==2&&nums[1]==2){
+    return true;
+  }
+  if (nums[0]==3&&nums[1]==3){
+    return true;
+  }
+  return false;
+}
+
+
