@@ -67,6 +67,54 @@ public class AlgorithmsProj {
         }
         return nums;
 	}
+
+	public static boolean allEven(int[] nums) {
+        for (int num : nums) {
+            if (num % 2 != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+	public static boolean threeInARow(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == nums[i + 1] && nums[i + 1] == nums[i + 2]) {
+                return true;
+            }
+        }
+        return false;
+    }
+	public static int countOccurrences(int[] nums, int target) {
+        int count = 0;
+        for (int num : nums) {
+            if (num == target) {
+                count++;
+            }
+        }
+        return count;
+    }
+	public static void reverseArray(int[] nums) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
+        }
+    }
+
+    // shifts 1 to the right
+    public static void shiftRight(int[] nums) {
+        if (nums.length > 0) {
+            int last = nums[nums.length - 1];
+            for (int i = nums.length - 1; i > 0; i--) {
+                nums[i] = nums[i - 1];
+            }
+            nums[0] = last;
+        }
+    }
+	
 	
 }
 
