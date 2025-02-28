@@ -1,4 +1,14 @@
-    public static int getSmallestNumber(int[] nums) {
+package HelloWorld;
+
+public class AlgorithmsProj {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	public static int getSmallestNumber(int[] nums) {
         int snum = nums[0];
         for (int num : nums) {
             if (num < snum) {
@@ -7,8 +17,8 @@
         }
         return snum;
     }
-
-  public static int indexOfSmallest(int[] nums) {
+	
+	public static int indexOfSmallest(int[] nums) {
         if (nums == null || nums.length == 0) {
             throw new IllegalArgumentException("Array must not be null or empty");
         }
@@ -23,8 +33,8 @@
 
         return sindex;
     }
-
-public static double average(int[] nums) {
+	
+	public static double average(int[] nums) {
         if (nums == null || nums.length == 0) {
             throw new IllegalArgumentException("Array must not be null or empty");
         }
@@ -36,4 +46,22 @@ public static double average(int[] nums) {
 
         return (double) sum / nums.length;
     }
+	
+	public static int[] insertionSort(int[] nums) {
+		for (int i = 1; i < nums.length; i++) {
+            int key = nums[i];
+            int j = i - 1;
+
+            // Move elements of arr[0..i-1] that are greater than key
+            // to one position ahead of their current position
+            while (j >= 0 && nums[j] > key) {
+            	nums[j + 1] = nums[j];
+                j--;
+            }
+            nums[j + 1] = key;
+        }
+        return nums;
+	}
+	
+}
 
