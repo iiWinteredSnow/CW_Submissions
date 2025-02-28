@@ -4,6 +4,9 @@ public class AlgorithmsProj {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int[] nums = {1234,764566,43,654,456,234,879,345};
+		nums = insertionSort(nums);
+		System.out.print(nums[0]+","+nums[1]+","+nums[3]+","+nums[4]+","+nums[5]+",");
 
 	}
 	
@@ -20,7 +23,8 @@ public class AlgorithmsProj {
 	
 	public static int indexOfSmallest(int[] nums) {
         if (nums == null || nums.length == 0) {
-            throw new IllegalArgumentException("Array must not be null or empty");
+            System.out.println("Array must not be null or empty");
+		return nums;
         }
 
         int sindex = 0;
@@ -36,7 +40,8 @@ public class AlgorithmsProj {
 	
 	public static double average(int[] nums) {
         if (nums == null || nums.length == 0) {
-            throw new IllegalArgumentException("Array must not be null or empty");
+            System.out.println("Array must not be null or empty");
+		return nums;
         }
 
         int sum = 0;
